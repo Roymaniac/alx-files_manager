@@ -1,7 +1,9 @@
 import redis from 'redis';
 import { promisify } from 'util';
 
-// 
+/**
+ * Class for performing basic redis operations
+ */
 class RedisClient {
     constructor(){
         this.client = redis.createClient();
@@ -12,7 +14,7 @@ class RedisClient {
         })
 
         this.client.on('connect', () => {
-            console.log('Redis client connected');
+            // console.log('Redis client connected');
         });
     }
 
